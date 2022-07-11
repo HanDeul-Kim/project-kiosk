@@ -23,16 +23,16 @@ window.addEventListener('resize', () => {
 })
 // audio
 let sound1 = new Howl({
-    src: ['./assets/audio/clear.mp3']
+    src: ['../assets/audio/clear.mp3']
 })
 let sound2 = new Howl({
-    src: ['./assets/audio/break.mp3']
+    src: ['../assets/audio/break.mp3']
 })
 let sound3 = new Howl({
-    src: ['./assets/audio/menu.mp3']
+    src: ['../assets/audio/menu.mp3']
 })
 let sound4 = new Howl({
-    src: ['./assets/audio/fix.mp3']
+    src: ['../assets/audio/fix.mp3']
 })
 // menu
 const modalBtn = document.querySelector(".menu");
@@ -298,7 +298,7 @@ clickBg();
 function backBgmOn() {
     audioBack = document.getElementById('cover_back')
     sourceBack = document.getElementById('source_back')
-    sourceBack.src = `./assets/audio/background.mp3`
+    sourceBack.src = `../assets/audio/background.mp3`
     audioBack.load();
     audioBack.play();
 }
