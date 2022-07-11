@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <div class="mute"><img src="./assets/img/sound_on.png" alt="mute"></div>
+    <!-- audio -->
+    <audio id="cover_back" preload="none">
+        <source id="source_back" src="">
+        </source>
+    </audio>
+    <!-- menu -->
+    <div class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal_copyright copyright01 active">
+            <p>www.thesquarelab.co.kr / info@thesqaurelab.co.kr</p>
+            <p>CopyRight 2022 Thesquarelab Co.,Ltd. All rights reserved. All design, drawings, graphics and data are
+                Properties of Thesquarelab Co., Ltd and can not be used or copied without written approval of
+                Thesquarelab Co.,Ltd.
+                Unauthorized duplication is violation of applicable laws.</p>
+            <p>해당 사이트는 경기천년제목 글꼴/ 나눔손글씨체 장미체/ 칠백삼체 유서연이 적용되어있습니다.</p>
+        </div>
+        <div class="modal_copyright copyright02"></div>
+        <div class="modal_copyright copyright03"></div>
+        <div class="modal-btn-inner">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    <!-- 좌측 level nav -->
+    <nav class="step_nav">
+        <div class="swiper-button-prev"></div>
+        <div class="center_text"></div>
+        <div class="swiper-button-next"></div>
+    </nav>
+    <div class="bottom_logo">
+        <img src="./assets/img/bottom_logo.png" alt="bottom_logo">
+        <div class="logo_info">
+            <span>AWESOME 3D</span>
+            <span>DINOSAURS</span>
+            <span>SKELETONS Quiz</span>
+        </div>
+    </div>
+    <!-- swiper -->
+    <canvas id="c_effect"></canvas>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <!-- 시작 -->
+            <div class="swiper-slide">
+                <div class="head-inner">
+                    <!-- <h2>AWESOME 3D</h2>
+                    <h1>DINOSAURS</h1>
+                    <h2>SKELETONS Quiz</h2> -->
+                </div>
+                <div class="start-inner">
+                    <img src="./assets/img/start_img.png" class="start" alt="start_img">
+                </div>
+            </div>
+            <!-- 공룡1 -->
+            <div class="swiper-slide">
+                <a href="#" class="dino_break"><img src="./assets/img/dino011.png" alt="dino_wall"></a>
+                <div class="fix-inner">
+                    <img src="./assets/img/fix.png" alt="fix" class="fix">
+                </div>
+                <a href="./bone/bone.html" class="original"><img src="./assets/img/dino01.png" alt="dino01.png"></a>
+            </div>
+            <!-- 공룡2 -->
+            <div class="swiper-slide">
+                <a href="#" class="dino_break"><img src="./assets/img/dino022.png" alt="dino_wall"></a>
+                <div class="fix-inner">
+                    <img src="./assets/img/fix.png" alt="fix" class="fix">
+                </div>
+                <a href="./bone2/bone2.html" class="original"><img src="./assets/img/dino02.png" alt="dino02.png"></a>
+            </div>
+            <!-- 공룡3 -->
+            <div class="swiper-slide">
+                <a href="#" class="dino_break"><img src="./assets/img/dino033.png" alt="dino_wall"></a>
+                <div class="fix-inner">
+                    <img src="./assets/img/fix.png" alt="fix" class="fix">
+                </div>
+                <a href="./bone3/bone3.html" class="original"><img src="./assets/img/dino03.png" alt="dino03.png"></a>
+            </div>
+            <!-- 공룡4 -->
+            <div class="swiper-slide">
+                <a href="#" class="dino_break"><img src="./assets/img/dino044.png" alt="dino_wall"></a>
+                <div class="fix-inner">
+                    <img src="./assets/img/fix.png" alt="fix" class="fix">
+                </div>
+                <a href="./bone4/bone4.html" class="original"><img src="./assets/img/dino04.png" alt="dino04.png"></a>
+            </div>
+            <!-- 공룡5 -->
+            <div class="swiper-slide">
+                <a href="#" class="dino_break"><img src="./assets/img/dino055.png" alt="dino_wall"></a>
+                <div class="fix-inner">
+                    <img src="./assets/img/fix.png" alt="fix" class="fix">
+                </div>
+                <a href="./bone5/bone5.html" class="original"><img src="./assets/img/dino05.png" alt="dino05.png"></a>
+            </div>
+            <!-- 공룡6 -->
+            <div class="swiper-slide">
+                <a href="#" class="dino_break"><img src="./assets/img/dino066.png" alt="dino_wall"></a>
+                <div class="fix-inner">
+                    <img src="./assets/img/fix.png" alt="fix" class="fix">
+                </div>
+                <a href="./bone6/bone6.html" class="original"><img src="./assets/img/dino06.png" alt="dino06.png"></a>
+            </div>
+            <!-- 공룡7 -->
+            <div class="swiper-slide">
+                <a href="#" class="dino_break"><img src="./assets/img/dino077.png" alt="dino_wall"></a>
+                <div class="fix-inner">
+                    <img src="./assets/img/fix.png" alt="fix" class="fix">
+                </div>
+                <a href="./bone7/bone7.html" class="original"><img src="./assets/img/dino07.png" alt="dino07.png"></a>
+            </div>
+            <!-- 공룡8 -->
+            <div class="swiper-slide">
+                <a href="#" class="dino_break"><img src="./assets/img/dino088.png" alt="dino_wall"></a>
+                <div class="fix-inner">
+                    <img src="./assets/img/fix.png" alt="fix" class="fix">
+                </div>
+                <a href="./bone8/bone8.html" class="original"><img src="./assets/img/dino08.png" alt="dino08.png"></a>
+            </div>
+            <!-- 공룡9 -->
+            <div class="swiper-slide">
+                <a href="#" class="dino_break"><img src="./assets/img/dino099.png" alt="dino_wall"></a>
+                <div class="fix-inner">
+                    <img src="./assets/img/fix.png" alt="fix" class="fix">
+                </div>
+                <a href="./bone9/bone9.html" class="original"><img src="./assets/img/dino09.png" alt="dino09.png"></a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="./assets/lib/three/three_ajax.js"></script>
+    <script src="./assets/lib/jquery/jquery.js"></script>
+    <script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/lib/gsap/gsap.min.js"></script>
+    <script src="./assets/lib/gsap/ScrollTrigger.min.js"></script>
+    <script src="./assets/lib/howler/howler.min.js"></script>
+    <script src="./assets/js/effect.js"></script>
+    <!-- main.js -->
+    <script src="./assets/js/index.js" type="module"></script>
+    
+
+</body>
+
+</html>

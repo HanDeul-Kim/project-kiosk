@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>bone03</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bone3.css">
+</head>
+
+<body>
+    <audio id="audio">
+        <source id="source" src=""></source>
+    </audio>
+    <div class="overlay"></div>
+    <div id="v3d-container"></div>
+    <nav class="progress-inner">
+        <li class="dot active">
+            <a href="#">시작</a>
+        </li>
+        <li class="dot">
+            <a href="#" data-audio=1>머리</a>
+        </li>
+        <li class="dot">
+            <a href="#" data-audio=2>목</a>
+        </li>
+        <li class="dot">
+            <a href="#" data-audio=3>다리</a>
+        </li>
+        <li class="dot">
+            <a href="#" data-audio=4>몸통</a>
+        </li>
+        <li class="dot">
+            <a href="#" data-audio=5>꼬리</a>
+        </li>
+        <li class="dot">
+            <a href="#">나는 무엇일까요?</a>
+        </li>
+        <li class="dot">
+            <a href="#modal8" data-audio=6>퀴즈</a>
+        </li>
+    </nav>
+
+    <div class="modal-inner">
+        <!-- modal01 -->
+        <section id="modal1" class="modal scrollStop">
+            <div class="content01 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click2.png" alt="start.png">
+                    이 녀석 이름은 무엇일까요?
+                </a>
+            </div>
+            <a href="#modal2" class="next" id="poi1" data-audio=1>다음</a>
+        </section>
+        <!-- modal02 -->
+        <section id="modal2" class="modal scrollStop">
+            <div class="content02 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click4.png" alt="click.png">
+                    머리뼈에는 많은 구멍이<br>있어서 머리가 가벼웠어요.
+                </a>
+            </div>
+            <a href="#modal3" class="next" id="poi2" data-audio=2>다음</a>
+        </section>
+        <!-- modal03 -->
+        <section id="modal3" class="modal scrollStop">
+            <div class="content03 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click3.png" alt="click.png">
+                    길이 22m, 키12m로,<br>용각류 중에서도 큰 편에 속해요.
+                </a>
+            </div>
+            <a href="#modal4" class="next" id="poi3" data-audio=3>다음</a>
+        </section>
+        <!-- modal04 -->
+        <section id="modal4" class="modal scrollStop">
+            <div class="content04 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click4.png" alt="click.png">
+                    앞다리가 뒷다리보다 훨씬 길어서<br>"팔이 긴 도마뱀"이라는 뜻의 이름을 가지게 되었어요.
+                </a>
+            </div>
+            <a href="#modal5" class="next" id="poi4" data-audio=4>다음</a>
+        </section>
+        <!-- modal05 -->
+        <section id="modal5" class="modal scrollStop">
+            <div class="content05-01 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click4.png" alt="click.png">
+                    고대 식물들은 소화하기 힘들어서,<br>소화기관의 길이는 100미터가 넘어야 했어요.
+                </a>
+            </div>
+            <div class="content05-02 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click3.png" alt="click.png">
+                    위에 있는 작은 돌들은 서로<br>부딪히면서 음식을 작게 잘라주었어요.
+                </a>
+            </div>
+            <a href="#modal6" class="next" id="poi5" data-audio=5>다음</a>
+        </section>
+        <!-- modal06 -->
+        <section id="modal6" class="modal scrollStop">
+            <div class="content06 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click4.png" alt="click.png">
+                    꼬리 길이가 다른 목이 긴 공룡들에 비해<br>상대적으로 짧았어요.
+                </a>
+            </div>
+            <a href="#modal7" class="next" id="poi6" data-audio="6">다음</a>
+        </section>
+        <!-- modal07 -->
+        <section id="modal7" class="modal scrollStop">
+            <div class="content07 modal-content last_audio">
+                <a href="#modal8" class="modal_nav">
+                    <img src="./assets/img/click2.png" alt="click.png">
+                    나의 이름은<br>무엇일까요?
+                </a>
+            </div>
+            <div class="touch"><img src="./assets/img/touch.gif" alt=""></div>
+        </section>
+        <!-- modal08 -->
+        <section id="modal8" class="modal scrollStop">
+            <div class="result">
+                <div class="result_text">
+                    <span style="margin-bottom:0.25em;">나는 누구일까요?</span>
+                </div>
+                <div class="question-inner">
+                    <div class="question-row">
+                        <button class="question" data-result="x">프테라노돈</button>
+                        <button class="question" data-result="x">알로사우루스</button>
+                    </div>
+                    <div class="question-row">
+                        <button class="question" data-result="x">파키케팔로사우루스</button>
+                        <button class="question" data-result="o">브라키오사우루스</button>
+                    </div>
+                </div>
+
+                <a href="../wg03.html" class="next_page">훌륭해요!</a>
+            </div>
+            <img src="./assets/img/correct.gif" class="correct" alt="correct_gif">
+            <img src="./assets/img/wrong.gif" class="wrong" alt="wrong_gif">
+        </section>
+    </div>
+
+
+    <script src=".././assets/lib/jquery/jquery.js"></script>
+    <script src=".././assets/lib/gsap/gsap.min.js"></script>
+    <script src=".././assets/lib/gsap/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/v3d.js"></script>
+    <script src="./assets/js/bone.js"></script>
+    <script src="./assets/js/custom.js"></script>
+
+</body>
+
+</html>

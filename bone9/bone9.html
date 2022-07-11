@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>bone9</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bone9.css">
+</head>
+
+<body>
+    <audio id="audio">
+        <source id="source" src=""></source>
+    </audio>
+    <div class="overlay"></div>
+    <div id="v3d-container"></div>
+    <nav class="progress-inner">
+        <li class="dot active">
+            <a href="#">시작</a>
+        </li>
+        <li class="dot">
+            <a href="#" data-audio=1>머리</a>
+        </li>
+        <li class="dot">
+            <a href="#" data-audio=2>몸통</a>
+        </li>
+        <li class="dot">
+            <a href="#" data-audio=3>지느러미</a>
+        </li>
+        <li class="dot">
+            <a href="#" data-audio=4>지느러미</a>
+        </li>
+        <li class="dot">
+            <a href="#" data-audio=5>꼬리</a>
+        </li>
+        <li class="dot">
+            <a href="#">나는 무엇일까요?</a>
+        </li>
+        <li class="dot">
+            <a href="#modal8" data-audio=6>퀴즈</a>
+        </li>
+    </nav>
+
+    <div class="modal-inner">
+        <!-- modal01 -->
+        <section id="modal1" class="modal scrollStop">
+            <div class="content01 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click2.png" alt="start.png">
+                    이 녀석 이름은 무엇일까요?
+                </a>
+            </div>
+            <a href="#modal2" class="next" id="poi1" data-audio=1>다음</a>
+        </section>
+        <!-- modal02 -->
+        <section id="modal2" class="modal scrollStop">
+            <div class="content02-01 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click4.png" alt="click.png">
+                    큰 먹이를 삼킬 수 있게<br>턱이 발달했어요.
+                </a>
+            </div>
+            <div class="content02-02 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click3.png" alt="click.png">
+                    청각과 후각이<br>매우 뛰어났어요.
+                </a>
+            </div>
+            <a href="#modal3" class="next" id="poi2" data-audio=2>다음</a>
+        </section>
+        <!-- modal03 -->
+        <section id="modal3" class="modal scrollStop">
+            <div class="content03 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click4.png" alt="click.png">
+                    키는 약 10~15m 정도에 몸무게는<br>5~9t 정도로 매우 컸어요.
+                </a>
+            </div>
+            
+            <a href="#modal4" class="next" id="poi3" data-audio=3>다음</a>
+        </section>
+        <!-- modal04 -->
+        <section id="modal4" class="modal scrollStop">
+            <div class="content04-01 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click4.png" alt="click.png">
+                    총 4개의 거대한<br>지느러미를 가지고 있어요.
+                </a>
+            </div>
+            <div class="content04-02 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click3.png" alt="click.png">
+                    지느러미가 짧고<br>두꺼워요.
+                </a>
+            </div>
+            <a href="#modal5" class="next" id="poi4" data-audio=4>다음</a>
+        </section>
+        <!-- modal05 -->
+        <section id="modal5" class="modal scrollStop">
+            <div class="content05 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click4.png" alt="click.png">
+                    큰 지느러미는 헤엄을 치면서 속도를<br>내거나 방향을 바꾸기 유리했어요.
+                </a>
+            </div>
+            <a href="#modal6" class="next" id="poi5" data-audio=5>다음</a>
+        </section>
+        <!-- modal06 -->
+        <section id="modal6" class="modal scrollStop">
+            <div class="content06 modal-content">
+                <a href="javascript:;" class="modal_nav">
+                    <img src="./assets/img/click3.png" alt="click.png">
+                    굉장히 긴 꼬리를 가지고 있어<br>빠른 속도를 낼 수 있었어요.
+                </a>
+            </div>
+            <a href="#modal7" class="next" id="poi6" data-audio="6">다음</a>
+        </section>
+        <!-- modal07 -->
+        <section id="modal7" class="modal scrollStop">
+            <div class="content07 modal-content last_audio">
+                <a href="#modal8" class="modal_nav">
+                    <img src="./assets/img/click2.png" alt="click.png">
+                    나의 이름은<br>무엇일까요?
+                </a>
+            </div>
+            <div class="touch"><img src="./assets/img/touch.gif" alt=""></div>
+        </section>
+        <!-- modal08 -->
+        <section id="modal8" class="modal scrollStop">
+            <div class="result">
+                <div class="result_text">
+                    <span style="margin-bottom:0.25em;">나는 누구일까요?</span>
+                </div>
+                <div class="question-inner">
+                    <div class="question-row">
+                        <button class="question" data-result="o">모사사우루스</button>
+                        <button class="question" data-result="x">브라키오사우루스</button>
+                    </div>
+                    <div class="question-row">
+                        <button class="question" data-result="o">스테고사우루스</button>
+                        <button class="question" data-result="x">파라사우롤로푸스</button>
+                    </div>
+                </div>
+
+                <a href="../wg09.html" class="next_page">훌륭해요!</a>
+            </div>
+            <img src="./assets/img/correct.gif" class="correct" alt="correct_gif">
+            <img src="./assets/img/wrong.gif" class="wrong" alt="wrong_gif">
+        </section>
+    </div>
+
+
+    <script src=".././assets/lib/jquery/jquery.js"></script>
+    <script src=".././assets/lib/gsap/gsap.min.js"></script>
+    <script src=".././assets/lib/gsap/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/v3d.js"></script>
+    <script src="./assets/js/bone.js"></script>
+    <script src="./assets/js/custom.js"></script>
+
+</body>
+
+</html>

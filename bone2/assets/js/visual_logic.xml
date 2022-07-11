@@ -1,0 +1,1438 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="871.9999999999998" scrolly="430.4999999999999" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="0.N7m;tbP0Z(EeoHA~#$" x="-950" y="-470">
+      <field name="LOAD_COMP_ASSETS">TRUE</field>
+      <field name="FULLSCREEN">FALSE</field>
+      <field name="BKG_TRANSPARENCY">TRUE</field>
+      <field name="PRESERVE_DRAW_BUF">FALSE</field>
+      <field name="FADE_ANNOTATIONS">FALSE</field>
+    </block>
+  </tab>
+  <tab name="main" type="MainTab" active="true" scrollx="833.6074988745862" scrolly="-41.51750093078044" scale="0.8227024747918819">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="LuYG*qn4;_FDk7//d|l0" type="">i</variable>
+      <variable id="1a5?qmY?}c~*_5b~TGip" type="">ani_speed</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="controls_if" id="O6$Wmd+lQvzY1gPC0iI`" x="-921" y="75">
+      <mutation elseif="2" else="1"/>
+      <value name="IF0">
+        <block type="featureAvailable" id="1.0+v2=BTx(349y[e)3U">
+          <field name="FEATURE">MOBILE</field>
+        </block>
+      </value>
+      <statement name="DO0">
+        <block type="setScreenScale" id="zV+O))Q.a{NSAPOuw]]D">
+          <value name="FACTOR">
+            <shadow type="math_number" id="vr%)OdP^KU0(M,[P6@z,">
+              <field name="NUM">0.78</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <value name="IF1">
+        <block type="featureAvailable" id="GbW/dR_xQLAXg3E_?}-.">
+          <field name="FEATURE">IOS</field>
+        </block>
+      </value>
+      <statement name="DO1">
+        <block type="setScreenScale" id="=aqKL[O?WX?-?HpNrV2`">
+          <value name="FACTOR">
+            <shadow type="math_number" id="@YtX2bz@xl731Js98kdC">
+              <field name="NUM">0.78</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <value name="IF2">
+        <block type="featureAvailable" id="kf#DUU_ozE^O6~{G^NYl">
+          <field name="FEATURE">ANDROID</field>
+        </block>
+      </value>
+      <statement name="DO2">
+        <block type="setScreenScale" id="^h6`2EjNgu2Fqs;*KiGb">
+          <value name="FACTOR">
+            <shadow type="math_number" id="3a^~~$|Xui,+-G})Qa,*">
+              <field name="NUM">0.78</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <statement name="ELSE">
+        <block type="setScreenScale" id="e^IjMzK%B/FA$_5/OXbn">
+          <value name="FACTOR">
+            <shadow type="math_number" id="{2Cg7QSfN)#U0{/4H{RQ">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="controls_for" id="1Q{Yin^(0l5vi=,6DIrh">
+          <field name="VAR" id="LuYG*qn4;_FDk7//d|l0">i</field>
+          <value name="FROM">
+            <shadow type="math_number" id="H$FM6t,FR_C03Q%_jK}6">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="TO">
+            <shadow type="math_number" id="C}*3VlOV8DviSTBr/tW#">
+              <field name="NUM">9</field>
+            </shadow>
+          </value>
+          <value name="BY">
+            <shadow type="math_number" id="KQw_NdKn#f@%rex5:ee%">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <statement name="DO">
+            <block type="setHTMLElemAttribute" id="OH(czIzzFz4f8.[s?3L;">
+              <field name="ATTRIBUTE">className</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <block type="text" id="w{x[~(?@U7u.1r,usr^$">
+                  <field name="TEXT">poi_all</field>
+                </block>
+              </value>
+              <value name="ID">
+                <shadow type="text">
+                  <field name="TEXT"/>
+                </shadow>
+                <block type="lists_create_with" id="xJShSPD!rbcy_RBHf-oV">
+                  <mutation items="2"/>
+                  <value name="ADD0">
+                    <block type="text_join" id="ypcb3WMH3/;(f^w:XJU(">
+                      <mutation items="2"/>
+                      <value name="ADD0">
+                        <block type="text" id="ce?C]WD/y%L1^c`AdA0)">
+                          <field name="TEXT">poi</field>
+                        </block>
+                      </value>
+                      <value name="ADD1">
+                        <block type="variables_get" id="B2nA`W%:#f8Q_;]%K]s,">
+                          <field name="VAR" id="LuYG*qn4;_FDk7//d|l0">i</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text" id="MF!.a*G#56x+BaDcE[tv">
+                      <field name="TEXT">poi_reset</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <next>
+            <block type="variables_set" id="r4`1g+!F28WdXG}cW[)j">
+              <field name="VAR" id="1a5?qmY?}c~*_5b~TGip">ani_speed</field>
+              <value name="VALUE">
+                <block type="math_number" id="eDOi.}sR@%:s#B{~X-M1">
+                  <field name="NUM">1.5</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <tab name="event" type="SecondaryTab" active="false" scrollx="-911.9520415848847" scrolly="1737.0493973960365" scale="0.7462153966366271">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id=".c}Vltc}R[d?}aJ-E#/P" type="">step</variable>
+      <variable id="78}d@NT8YWMONWp-}2$x" type="">set1_A</variable>
+      <variable id="(*{)gA,(S/NuSKdAj6~m" type="">set2_A</variable>
+      <variable id="/)!=NHr,9Gb`mS=bWCfh" type="">set3_A</variable>
+      <variable id="J878z[u7u{wB=7X7r9=r" type="">set4_A</variable>
+      <variable id="gkyVUeP5)_x^1#fN-5~-" type="">set5_A</variable>
+      <variable id="1a5?qmY?}c~*_5b~TGip" type="">ani_speed</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="a/5OGBew:or;q!I}KRMV" x="750" y="-2130">
+      <mutation>
+        <arg name="step" varid=".c}Vltc}R[d?}aJ-E#/P"/>
+        <arg name="set1_A" varid="78}d@NT8YWMONWp-}2$x"/>
+        <arg name="set2_A" varid="(*{)gA,(S/NuSKdAj6~m"/>
+        <arg name="set3_A" varid="/)!=NHr,9Gb`mS=bWCfh"/>
+        <arg name="set4_A" varid="J878z[u7u{wB=7X7r9=r"/>
+        <arg name="set5_A" varid="gkyVUeP5)_x^1#fN-5~-"/>
+      </mutation>
+      <field name="NAME">Event</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="setMaterialValue" id="trkSuprTm$)Ke*IbZ{UC">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+          <field name="MAT_VAL_NAME">set1_Transparency</field>
+          <value name="MATERIAL">
+            <shadow type="materialList" id="uD,5M!jGzFsPG@)VmU#%">
+              <field name="FIELDNAME">set1</field>
+            </shadow>
+          </value>
+          <value name="VALUE">
+            <shadow type="math_number" id="m-fav7]Va~rHpoGQlTR]">
+              <field name="NUM">0</field>
+            </shadow>
+            <block type="variables_get" id="2c}5HsR4NZUM6BUt5Y{/">
+              <field name="VAR" id="78}d@NT8YWMONWp-}2$x">set1_A</field>
+            </block>
+          </value>
+          <next>
+            <block type="setMaterialValue" id="7L`hUc8@,Of_mUv?rk]^">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+              <field name="MAT_VAL_NAME">set2_Transparency</field>
+              <value name="MATERIAL">
+                <shadow type="materialList" id="50J4Ve0j.1WPoT@D:!Q9">
+                  <field name="FIELDNAME">set2</field>
+                </shadow>
+              </value>
+              <value name="VALUE">
+                <shadow type="math_number" id="zu38[xdEYfI#Z2|vRV%g">
+                  <field name="NUM">0</field>
+                </shadow>
+                <block type="variables_get" id="gcY3kcV+V-k9/5m0E4,M">
+                  <field name="VAR" id="(*{)gA,(S/NuSKdAj6~m">set2_A</field>
+                </block>
+              </value>
+              <next>
+                <block type="setMaterialValue" id="vzl:lRzsmSVmgeVf;*R_">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+                  <field name="MAT_VAL_NAME">set3_Transparency</field>
+                  <value name="MATERIAL">
+                    <shadow type="materialList" id="axL1!gxqCA/-v=I?%QX,">
+                      <field name="FIELDNAME">set3</field>
+                    </shadow>
+                  </value>
+                  <value name="VALUE">
+                    <shadow type="math_number" id="]}ysMVn]+wX`TPb?Y;|T">
+                      <field name="NUM">0</field>
+                    </shadow>
+                    <block type="variables_get" id="tK$JI;+Hggj%dew7:ZCx">
+                      <field name="VAR" id="/)!=NHr,9Gb`mS=bWCfh">set3_A</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="setMaterialValue" id="t[M5$PWE.R[?evH+DlZu">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+                      <field name="MAT_VAL_NAME">set4_Transparency</field>
+                      <value name="MATERIAL">
+                        <shadow type="materialList" id="#}+3`m[ijA@A^axk[}4n">
+                          <field name="FIELDNAME">set4</field>
+                        </shadow>
+                      </value>
+                      <value name="VALUE">
+                        <shadow type="math_number" id="e{y5XB*Tsvq})dE-~,NG">
+                          <field name="NUM">0</field>
+                        </shadow>
+                        <block type="variables_get" id="y]_pHy+;:6s2c(+6sF1$">
+                          <field name="VAR" id="J878z[u7u{wB=7X7r9=r">set4_A</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="setMaterialValue" id="Ix_sn1{zsRQa-lRU2C+O">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+                          <field name="MAT_VAL_NAME">set5_Transparency</field>
+                          <value name="MATERIAL">
+                            <shadow type="materialList" id="4sl|n0*nzJOCxdQ}jx~,">
+                              <field name="FIELDNAME">set5</field>
+                            </shadow>
+                          </value>
+                          <value name="VALUE">
+                            <shadow type="math_number" id="Lr]f7:vRBh*PWr/^/LE~">
+                              <field name="NUM">0</field>
+                            </shadow>
+                            <block type="variables_get" id="ppP5%[f6sHIx~Sa]%1mG">
+                              <field name="VAR" id="gkyVUeP5)_x^1#fN-5~-">set5_A</field>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="_8F:p2-yn?T/k}x/YsP!" x="1430" y="-2110">
+      <field name="NAME">ani_start</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="enableRendering" id="WQogNC_G(^#}[KJfQfCZ">
+          <next>
+            <block type="console.log" id="Ph`Fi_~jJ~-@C2y9e@#I">
+              <value name="VALUE">
+                <shadow type="text" id="aUWk@X-+*OAi!twM;N*:">
+                  <field name="TEXT">Hello, Verge!</field>
+                </shadow>
+                <block type="math_arithmetic" id="C|G~*t+c4Th=p^Ww(H@t">
+                  <field name="OP">ADD</field>
+                  <value name="A">
+                    <shadow type="math_number" id=":Z7B|f7pgj83{[{1EH+9">
+                      <field name="NUM">100</field>
+                    </shadow>
+                    <block type="math_arithmetic" id="n`Ax{EHWoBWc,=9KxGwo">
+                      <field name="OP">MULTIPLY</field>
+                      <value name="A">
+                        <shadow type="math_number" id="_3ADvfi*bVZYatR!J~Ky">
+                          <field name="NUM">100</field>
+                        </shadow>
+                        <block type="math_arithmetic" id="pf2P.@U;@b{[YdBw=xsY">
+                          <field name="OP">MINUS</field>
+                          <value name="A">
+                            <shadow type="math_number" id="S29caB5FjRp,o^[b=,([">
+                              <field name="NUM">100</field>
+                            </shadow>
+                            <block type="variables_get" id="1]J6lIilB[}IXuDk(F7I">
+                              <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <shadow type="math_number" id="a,Hxf_sYz:/MJcLaP%dM">
+                              <field name="NUM">1</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <shadow type="math_number" id="dA$|idC~Ob?oSB@#_$`f">
+                          <field name="NUM">100</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <shadow type="math_number" id="e=F%CY+WwP84]36~75[R">
+                      <field name="NUM">1</field>
+                    </shadow>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="console.log" id="nS2ENm?C77gm;lweH~-z">
+                  <value name="VALUE">
+                    <shadow type="text" id="1]Hx?ieGfRLNR*I}wAu#">
+                      <field name="TEXT">Hello, Verge!</field>
+                    </shadow>
+                    <block type="math_arithmetic" id="5Tju)w~|9OL)3F`euMw9">
+                      <field name="OP">MULTIPLY</field>
+                      <value name="A">
+                        <shadow type="math_number" id="]V-jRj`BO/4@JI^bv10A">
+                          <field name="NUM">100</field>
+                        </shadow>
+                      </value>
+                      <value name="B">
+                        <shadow type="math_number" id="OJ*rmKl{RQ6m5F.^+~Iv">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="variables_get" id="HVz8LB8mN,v^g[$DvY*_">
+                          <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="createCSSRule" id="foaJF+HeR`9+xi1#NWaX">
+                      <field name="PARENT">FALSE</field>
+                      <value name="CSS_RULE">
+                        <shadow type="text" id="kCkF@la5hVa]B.zHvtc4">
+                          <field name="TEXT">.poi_all</field>
+                        </shadow>
+                      </value>
+                      <value name="CSS_RULE_CONT">
+                        <shadow type="text" id="W(Syfa!q{q~GcBzbhb?@">
+                          <field name="TEXT">pointer-events: none;</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="playAnimationAdv" id="_f8vy].U1rF`,3M*JzD$">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
+                          <field name="REVERSED">FALSE</field>
+                          <field name="LOOP">LoopOnce</field>
+                          <value name="VALUE">
+                            <shadow type="animationList">
+                              <field name="FIELDNAME">&lt;none&gt;</field>
+                            </shadow>
+                            <block type="getAnimations" id="o$R$V`5:*J2[)@9}Y$~c">
+                              <value name="OBJECTINPUT">
+                                <shadow type="objectList">
+                                  <field name="FIELDNAME">&lt;none&gt;</field>
+                                </shadow>
+                                <block type="groupList" id="j}NfF.*=;$hYBRyNgV/o">
+                                  <field name="FIELDNAME">all</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="FROM">
+                            <block type="math_arithmetic" id="489U1CB/QMyG*S1iKY7U">
+                              <field name="OP">ADD</field>
+                              <value name="A">
+                                <shadow type="math_number">
+                                  <field name="NUM">100</field>
+                                </shadow>
+                                <block type="math_arithmetic" id="y#U:kaYT!+^|,;K~:Ig6">
+                                  <field name="OP">MULTIPLY</field>
+                                  <value name="A">
+                                    <shadow type="math_number">
+                                      <field name="NUM">100</field>
+                                    </shadow>
+                                    <block type="math_arithmetic" id="j|1ojnD`BklD#_{KeX:!">
+                                      <field name="OP">MINUS</field>
+                                      <value name="A">
+                                        <shadow type="math_number">
+                                          <field name="NUM">100</field>
+                                        </shadow>
+                                        <block type="variables_get" id="]rVtU3{i2y+:nt1~!wu_">
+                                          <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <shadow type="math_number" id="WTuq*;?)K-/3zs}Uu}FN">
+                                          <field name="NUM">1</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <shadow type="math_number" id="0oju[z!6CVHQvT}$r[9Q">
+                                      <field name="NUM">100</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number" id="|;k+;!}.rF}1zr$YqzW)">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="TO">
+                            <block type="math_arithmetic" id="v)R}A_N$b.Mh77ma[{54">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number" id="99)`U%h[#B|FAf}4,X1|">
+                                  <field name="NUM">100</field>
+                                </shadow>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="variables_get" id=";ZRaULTY`;WNadk0_s]:">
+                                  <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="SPEED">
+                            <block type="math_arithmetic" id="DzC}rydH^-D}80Ac1V#i">
+                              <field name="OP">DIVIDE</field>
+                              <value name="A">
+                                <shadow type="math_number" id="gX.69l|$,Vi]kuX2^q};">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="variables_get" id="6D1S@7M,n)d/V/|F*%(`">
+                                  <field name="VAR" id="1a5?qmY?}c~*_5b~TGip">ani_speed</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="createCSSRule" id="KWs:VrpYM|Zc%$1KP|`t">
+                              <field name="PARENT">FALSE</field>
+                              <value name="CSS_RULE">
+                                <shadow type="text" id="N~DAMt*$(7yC%MMzMW{E">
+                                  <field name="TEXT">.poi_all</field>
+                                </shadow>
+                              </value>
+                              <value name="CSS_RULE_CONT">
+                                <shadow type="text" id=";HAMsH.+Zl[GqMbqAD=(">
+                                  <field name="TEXT">pointer-events: auto;</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="disableRendering" id=";3F(vdK(OgFYj5-2J22o">
+                                  <field name="AA">TRUE</field>
+                                  <next>
+                                    <block type="controls_if" id="+4GG=NmWmF,3x`H@IAao">
+                                      <value name="IF0">
+                                        <block type="logic_compare" id="ZQ4z3fb7FWL!Q/_it^rh">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get" id="BzpwdvC5$p#!#XI~KYK7">
+                                              <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number" id="=TfKbpe$2WID#_4[KMe7">
+                                              <field name="NUM">6</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO0">
+                                        <block type="setActiveCamera" id="*ZTY7~qKdZ-!khtVhYt5">
+                                          <value name="CAMERA">
+                                            <shadow type="objectList" id="Dtg)NF2.^#savMh{qioN">
+                                              <field name="FIELDNAME">PhysCamera002</field>
+                                            </shadow>
+                                          </value>
+                                          <next>
+                                            <block type="autoRotateCamera" id="g[NU]`mw?)Z;g}@=B@^I">
+                                              <field name="ON_OFF">ON</field>
+                                              <value name="SPEED">
+                                                <shadow type="math_number" id="Wt;VRG._v.a-|gWjtw#H">
+                                                  <field name="NUM">1</field>
+                                                </shadow>
+                                              </value>
+                                              <next>
+                                                <block type="enableRendering" id="9heo7zFY#-v{]}`k]AP0"/>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="animateParam" id="+rh44VWe=vMM|6yDmuz_">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="false"></mutation>
+                              <field name="EASING">Linear</field>
+                              <field name="EASING2">InOut</field>
+                              <field name="YOYO">FALSE</field>
+                              <value name="FROM">
+                                <shadow type="math_number" id="o$?8O[mK.*^a0/sSWiz)">
+                                  <field name="NUM">0</field>
+                                </shadow>
+                              </value>
+                              <value name="TO">
+                                <shadow type="math_number" id="ZNp%cw4]2t$/@=8DF}*N">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
+                              <value name="DURATION">
+                                <shadow type="math_number" id=":M]dSv_[?i)T}n|2Dh0J">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="math_arithmetic" id="iOHG`c0;ZZ8P|[uS+@c+">
+                                  <field name="OP">MULTIPLY</field>
+                                  <value name="A">
+                                    <shadow type="math_number" id="4bT^P/z2F6J^yPA!Y`vC">
+                                      <field name="NUM">2</field>
+                                    </shadow>
+                                    <block type="variables_get" id="^lN_|v]J%h:Qh8H78!Yc">
+                                      <field name="VAR" id="1a5?qmY?}c~*_5b~TGip">ani_speed</field>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <shadow type="math_number" id="I.GU(C||iHo/MzvsOh1G">
+                                      <field name="NUM">1.5</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="REPEAT">
+                                <shadow type="math_number" id="r^aa2mJpU:9.(}sh`mpm">
+                                  <field name="NUM">0</field>
+                                </shadow>
+                              </value>
+                              <statement name="ON_UPDATE">
+                                <block type="controls_if" id="GB-7E,OwcFwRz25Ky4`^">
+                                  <value name="IF0">
+                                    <block type="logic_compare" id=":s4(AZSX)kx/OJlbM?L*">
+                                      <field name="OP">EQ</field>
+                                      <value name="A">
+                                        <block type="variables_get" id="EX0X`CLpHSUbZHe?25@f">
+                                          <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="math_number" id="ps*ujS?J/W*@Ow_m0A]W">
+                                          <field name="NUM">1</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <statement name="DO0">
+                                    <block type="procedures_callnoreturn" id="KK0F|n]V:@!MSS7xe_wu" inline="false">
+                                      <mutation name="Event">
+                                        <arg name="step"/>
+                                        <arg name="set1_A"/>
+                                        <arg name="set2_A"/>
+                                        <arg name="set3_A"/>
+                                        <arg name="set4_A"/>
+                                        <arg name="set5_A"/>
+                                      </mutation>
+                                      <value name="ARG1">
+                                        <block type="math_number" id="oeB]Uv0L6vJi:z2ffg%c">
+                                          <field name="NUM">0</field>
+                                        </block>
+                                      </value>
+                                      <value name="ARG2">
+                                        <block type="animateParamUpdate" id="I,,I-%G%DhXyap$|2vv7"/>
+                                      </value>
+                                      <value name="ARG3">
+                                        <block type="animateParamUpdate" id="P9-EOLx).c6d:dioZS0!"/>
+                                      </value>
+                                      <value name="ARG4">
+                                        <block type="animateParamUpdate" id="`;Ov(Bt-I?|*?iw3LH#)"/>
+                                      </value>
+                                      <value name="ARG5">
+                                        <block type="animateParamUpdate" id="=~yw#Ag;?.Jti29Th;;r"/>
+                                      </value>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="controls_if" id="F)+E?HuacR/QE${4QLR[">
+                                      <value name="IF0">
+                                        <block type="logic_compare" id="[|+7dRT~j-gSBhyZs-Wr">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get" id="dDbp_E`CR~GCq1MyP)GJ">
+                                              <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number" id="KW[]2L$tC+h=-C0=Crf+">
+                                              <field name="NUM">2</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO0">
+                                        <block type="procedures_callnoreturn" id="Zr{b4sG~W@2rW.}]SF.R" inline="false">
+                                          <mutation name="Event">
+                                            <arg name="step"/>
+                                            <arg name="set1_A"/>
+                                            <arg name="set2_A"/>
+                                            <arg name="set3_A"/>
+                                            <arg name="set4_A"/>
+                                            <arg name="set5_A"/>
+                                          </mutation>
+                                          <value name="ARG1">
+                                            <block type="animateParamUpdate" id="3Tw~j|lQ^mg4R2ysqun@"/>
+                                          </value>
+                                          <value name="ARG2">
+                                            <block type="math_arithmetic" id="*jG2XNAqOcIAM!Rh3p$B">
+                                              <field name="OP">MINUS</field>
+                                              <value name="A">
+                                                <shadow type="math_number" id="MX^sK(IIoPAN7,0h!bg)">
+                                                  <field name="NUM">1</field>
+                                                </shadow>
+                                              </value>
+                                              <value name="B">
+                                                <shadow type="math_number" id="xYkuy4w++x`5i)ka${+w">
+                                                  <field name="NUM">2</field>
+                                                </shadow>
+                                                <block type="animateParamUpdate" id="iSnPn=kWHt,oCg^uJo^/"/>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <value name="ARG3">
+                                            <block type="math_number" id="V%sLQ^cm`ur#dt8Y%*99">
+                                              <field name="NUM">1</field>
+                                            </block>
+                                          </value>
+                                          <value name="ARG4">
+                                            <block type="math_number" id="MKVJDtJI6+uZ5!]UT%WG">
+                                              <field name="NUM">1</field>
+                                            </block>
+                                          </value>
+                                          <value name="ARG5">
+                                            <block type="math_number" id="zyH^!vqqMW5WLr97,Unu">
+                                              <field name="NUM">1</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="controls_if" id="lh^}ZwwqSOKG^28P_=y?">
+                                          <value name="IF0">
+                                            <block type="logic_compare" id="aQmOsQYY-(89VoxHU+W{">
+                                              <field name="OP">EQ</field>
+                                              <value name="A">
+                                                <block type="variables_get" id="OEs.F45G+U877eVfC0k5">
+                                                  <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="math_number" id="u$3^857uo=Ovir9MUV!~">
+                                                  <field name="NUM">3</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO0">
+                                            <block type="procedures_callnoreturn" id="(k+E=ZLy9EOD/[r;RkMa" inline="false">
+                                              <mutation name="Event">
+                                                <arg name="step"/>
+                                                <arg name="set1_A"/>
+                                                <arg name="set2_A"/>
+                                                <arg name="set3_A"/>
+                                                <arg name="set4_A"/>
+                                                <arg name="set5_A"/>
+                                              </mutation>
+                                              <value name="ARG1">
+                                                <block type="math_number" id="-y-W{k!|d~Zq(c?Kztk`">
+                                                  <field name="NUM">1</field>
+                                                </block>
+                                              </value>
+                                              <value name="ARG2">
+                                                <block type="animateParamUpdate" id="%nhHhrs?6BT2=L`X.-S]"/>
+                                              </value>
+                                              <value name="ARG3">
+                                                <block type="math_arithmetic" id="@c?0sm49nm$HewT*J3n)">
+                                                  <field name="OP">MINUS</field>
+                                                  <value name="A">
+                                                    <shadow type="math_number" id="nWBqJ*`mJa%0`0=NyYLC">
+                                                      <field name="NUM">1</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <value name="B">
+                                                    <shadow type="math_number">
+                                                      <field name="NUM">2</field>
+                                                    </shadow>
+                                                    <block type="animateParamUpdate" id="{q4%SzuQc1Mkqoa3O^)d"/>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <value name="ARG4">
+                                                <block type="math_number" id="^*mqYv)-u}dcEq`XG0IM">
+                                                  <field name="NUM">1</field>
+                                                </block>
+                                              </value>
+                                              <value name="ARG5">
+                                                <block type="math_number" id="fkfqzf8F@E0@%[rrr8{e">
+                                                  <field name="NUM">1</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                          <next>
+                                            <block type="controls_if" id="JgTi-IbNn?Is+4lAy/Df">
+                                              <value name="IF0">
+                                                <block type="logic_compare" id="7#rW[lZyQL*}1q!GMx`d">
+                                                  <field name="OP">EQ</field>
+                                                  <value name="A">
+                                                    <block type="variables_get" id="-OoD40mI%g~QoI{q*.H8">
+                                                      <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="math_number" id="aWOI4{864$m}IbIUa$#[">
+                                                      <field name="NUM">4</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <statement name="DO0">
+                                                <block type="procedures_callnoreturn" id="pW_#COZjV%XFWSL9Qbp!" inline="false">
+                                                  <mutation name="Event">
+                                                    <arg name="step"/>
+                                                    <arg name="set1_A"/>
+                                                    <arg name="set2_A"/>
+                                                    <arg name="set3_A"/>
+                                                    <arg name="set4_A"/>
+                                                    <arg name="set5_A"/>
+                                                  </mutation>
+                                                  <value name="ARG1">
+                                                    <block type="math_number" id=";{w:{*7yhJjPW@!YyPjp">
+                                                      <field name="NUM">1</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ARG2">
+                                                    <block type="math_number" id="_0X#?A^J1PJSk6]3`P,k">
+                                                      <field name="NUM">1</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ARG3">
+                                                    <block type="animateParamUpdate" id="*a}B^ONGF/S#tjeDpXxy"/>
+                                                  </value>
+                                                  <value name="ARG4">
+                                                    <block type="math_arithmetic" id="`rJNl;GKi(076Ht}I}u:">
+                                                      <field name="OP">MINUS</field>
+                                                      <value name="A">
+                                                        <shadow type="math_number" id="}%a6n!|bfu1r$~nqXFDX">
+                                                          <field name="NUM">1</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <value name="B">
+                                                        <shadow type="math_number">
+                                                          <field name="NUM">2</field>
+                                                        </shadow>
+                                                        <block type="animateParamUpdate" id="?iEJRu2z#Hn}AIaX[=r*"/>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ARG5">
+                                                    <block type="math_number" id="I0tx]DHVinp,x]#+2R6@">
+                                                      <field name="NUM">1</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </statement>
+                                              <next>
+                                                <block type="controls_if" id="[r/sY^-@]gDv!?q)W}SH">
+                                                  <value name="IF0">
+                                                    <block type="logic_compare" id="@jRg|fk1,uP|p4CO/GL%">
+                                                      <field name="OP">EQ</field>
+                                                      <value name="A">
+                                                        <block type="variables_get" id="/Sf(%`!Eu3~4N66H(A-#">
+                                                          <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="B">
+                                                        <block type="math_number" id="mXy0QHM1W=v|2P)R#QD$">
+                                                          <field name="NUM">5</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                  <statement name="DO0">
+                                                    <block type="procedures_callnoreturn" id="S^d;si8aW@3i9CYd;O+U" inline="false">
+                                                      <mutation name="Event">
+                                                        <arg name="step"/>
+                                                        <arg name="set1_A"/>
+                                                        <arg name="set2_A"/>
+                                                        <arg name="set3_A"/>
+                                                        <arg name="set4_A"/>
+                                                        <arg name="set5_A"/>
+                                                      </mutation>
+                                                      <value name="ARG1">
+                                                        <block type="math_number" id="nBGvOmOhfv2h*D0xb{m0">
+                                                          <field name="NUM">1</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ARG2">
+                                                        <block type="math_number" id=".z|RY?2TpCcZ#LY+Pj-d">
+                                                          <field name="NUM">1</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ARG3">
+                                                        <block type="math_number" id="^Nt{pt)gks@wy!n=(GjK">
+                                                          <field name="NUM">1</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ARG4">
+                                                        <block type="animateParamUpdate" id="AK,%l$0%,%IG)dPOgIM:"/>
+                                                      </value>
+                                                      <value name="ARG5">
+                                                        <block type="math_arithmetic" id="g^=VXoE,1{BzFs.NIPrc">
+                                                          <field name="OP">MINUS</field>
+                                                          <value name="A">
+                                                            <shadow type="math_number" id="}a9hux)Xe{j-x9p+qDso">
+                                                              <field name="NUM">1</field>
+                                                            </shadow>
+                                                          </value>
+                                                          <value name="B">
+                                                            <shadow type="math_number">
+                                                              <field name="NUM">2</field>
+                                                            </shadow>
+                                                            <block type="animateParamUpdate" id="]mRzc9ePF)v}(6hIbt0Y"/>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </statement>
+                                                  <next>
+                                                    <block type="controls_if" id="Ga9lkS32l,j3].B^Qzga">
+                                                      <value name="IF0">
+                                                        <block type="logic_compare" id="F:LoLI6Sss0:kS:Fs~Bh">
+                                                          <field name="OP">EQ</field>
+                                                          <value name="A">
+                                                            <block type="variables_get" id="$_$dozZ[9a4C%!b`H+kg">
+                                                              <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="B">
+                                                            <block type="math_number" id="h3L!Dl2LxEP#t%^^9,S6">
+                                                              <field name="NUM">6</field>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                      <statement name="DO0">
+                                                        <block type="procedures_callnoreturn" id="a+hU/:Om6uXuq8MVQ59X" inline="false">
+                                                          <mutation name="Event">
+                                                            <arg name="step"/>
+                                                            <arg name="set1_A"/>
+                                                            <arg name="set2_A"/>
+                                                            <arg name="set3_A"/>
+                                                            <arg name="set4_A"/>
+                                                            <arg name="set5_A"/>
+                                                          </mutation>
+                                                          <value name="ARG1">
+                                                            <block type="math_arithmetic" id="xLY`VbbR0Ce_8*NaPHY1">
+                                                              <field name="OP">MINUS</field>
+                                                              <value name="A">
+                                                                <shadow type="math_number" id="}@CT{@O4F})l3O*vMxL^">
+                                                                  <field name="NUM">1</field>
+                                                                </shadow>
+                                                              </value>
+                                                              <value name="B">
+                                                                <shadow type="math_number">
+                                                                  <field name="NUM">2</field>
+                                                                </shadow>
+                                                                <block type="animateParamUpdate" id="JNu0/5;stYTBz(Qi*uIb"/>
+                                                              </value>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ARG2">
+                                                            <block type="math_arithmetic" id="L4[gJ~q}Q6P_!:U=-y|f">
+                                                              <field name="OP">MINUS</field>
+                                                              <value name="A">
+                                                                <shadow type="math_number" id="|ZcQjl=gke/,}jRXTP+0">
+                                                                  <field name="NUM">1</field>
+                                                                </shadow>
+                                                              </value>
+                                                              <value name="B">
+                                                                <shadow type="math_number">
+                                                                  <field name="NUM">2</field>
+                                                                </shadow>
+                                                                <block type="animateParamUpdate" id="gZvjbA8n%uFR3G8VD^(t"/>
+                                                              </value>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ARG3">
+                                                            <block type="math_arithmetic" id="QL}umF.:]*KUp(%c[LLY">
+                                                              <field name="OP">MINUS</field>
+                                                              <value name="A">
+                                                                <shadow type="math_number" id="nmL{$/Orau2a?iVK,KN;">
+                                                                  <field name="NUM">1</field>
+                                                                </shadow>
+                                                              </value>
+                                                              <value name="B">
+                                                                <shadow type="math_number">
+                                                                  <field name="NUM">2</field>
+                                                                </shadow>
+                                                                <block type="animateParamUpdate" id="02};O^}PPT`aEkJA=J-3"/>
+                                                              </value>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ARG4">
+                                                            <block type="math_arithmetic" id="w!Rie)L|$$$S^4x+tmL[">
+                                                              <field name="OP">MINUS</field>
+                                                              <value name="A">
+                                                                <shadow type="math_number" id="xBs}_(Y,D]V/0I_1TQBc">
+                                                                  <field name="NUM">1</field>
+                                                                </shadow>
+                                                              </value>
+                                                              <value name="B">
+                                                                <shadow type="math_number">
+                                                                  <field name="NUM">2</field>
+                                                                </shadow>
+                                                                <block type="animateParamUpdate" id="6B6Cu-0y8r_j~b|d$]gQ"/>
+                                                              </value>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ARG5">
+                                                            <block type="math_number" id="=2ldgVp$]32].$~)=Ldc">
+                                                              <field name="NUM">0</field>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </statement>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="controls_if" id="Cjj9AH*EZK9suCZcM!;:">
+                                  <value name="IF0">
+                                    <block type="logic_compare" id="iZ3Whj2I78SVHyqtx7T+">
+                                      <field name="OP">LT</field>
+                                      <value name="A">
+                                        <block type="variables_get" id="o%kX`zka5:gXntsc)U_?">
+                                          <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="math_number" id="^2};P8JPTP2WTPq4lrC=">
+                                          <field name="NUM">6</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <statement name="DO0">
+                                    <block type="setObjTransform" id="$egUvClh$#RMaH5k.87U">
+                                      <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="true" useworldspace="false"></mutation>
+                                      <field name="MODE">position</field>
+                                      <field name="OFFSET">FALSE</field>
+                                      <value name="TARGETOBJ">
+                                        <shadow type="objectList" id="/66c]|2Gf9NK:3BA(n33">
+                                          <field name="FIELDNAME">PhysCamera002</field>
+                                        </shadow>
+                                      </value>
+                                      <value name="USE_VECTOR">
+                                        <block type="getObjTransform" id="d)H20fk]KwTlcKxJ6zy`">
+                                          <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+                                          <field name="MODE">position</field>
+                                          <field name="COORD">xyz</field>
+                                          <value name="TARGETOBJ">
+                                            <shadow type="objectList" id="FG%Hc|IQdt/i7rNC2~Kt">
+                                              <field name="FIELDNAME">center.camera.pos</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="setObjTransform" id="yZ~Bi]vTk|8dz=Q8In~M">
+                                          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="true" useworldspace="false"></mutation>
+                                          <field name="MODE">position</field>
+                                          <field name="OFFSET">FALSE</field>
+                                          <value name="TARGETOBJ">
+                                            <shadow type="objectList" id=";7{F(zjEtJV9#$]JJ{P.">
+                                              <field name="FIELDNAME">PhysCamera002.Target</field>
+                                            </shadow>
+                                          </value>
+                                          <value name="USE_VECTOR">
+                                            <block type="getObjTransform" id=",)e~V30S6fI,qS.k9Wq1">
+                                              <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+                                              <field name="MODE">position</field>
+                                              <field name="COORD">xyz</field>
+                                              <value name="TARGETOBJ">
+                                                <shadow type="objectList" id="!n_=ePeU`l8jPaGL:nM.">
+                                                  <field name="FIELDNAME">center</field>
+                                                </shadow>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="setActiveCamera" id="n),;Ev=.|wT1cPz:Apu?">
+                                              <value name="CAMERA">
+                                                <shadow type="objectList" id="8NGqedbTDAd=6x=asM^{">
+                                                  <field name="FIELDNAME">PhysCamera001</field>
+                                                </shadow>
+                                              </value>
+                                              <next>
+                                                <block type="enableRendering" id="FizI%c-0wRh}uatc7Cie"/>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="stopAnimation" id=".DBhz5{0Vu!GSs[,c!5z" x="290" y="-558">
+      <value name="VALUE">
+        <shadow type="animationList">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="getAnimations" id="Xth#3d2+}T=EDv6@mwM4">
+          <value name="OBJECTINPUT">
+            <block type="allObjectList" id="}:Z2.zaxbANHTO7,=Z:m"/>
+          </value>
+        </block>
+      </value>
+      <next>
+        <block type="setActiveCamera" id="[H4-30VG-v[!5SePe0hm">
+          <value name="CAMERA">
+            <shadow type="objectList" id="?c.t_kw]u+ik,W,d4cOT">
+              <field name="FIELDNAME">PhysCamera001</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="setAnimationFrame" id="Xj{qn[c:{@Pj1;@q({g{">
+              <value name="VALUE">
+                <shadow type="animationList">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="getAnimations" id="b4AO6+TWrtax6?6a}d(n">
+                  <value name="OBJECTINPUT">
+                    <block type="groupList" id="np[xOF}bv4G/mQO:y=iy">
+                      <field name="FIELDNAME">all</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="FROM">
+                <shadow type="math_number" id="9#~yX+3FtQPRlp$]03d7">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="eventHTMLElem" id="=;t_KrekV0fk4V%BG6:d">
+                  <field name="EVENT">click</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="ID">
+                    <shadow type="text" id="OlCvv!idFpv[RCzc@qVO">
+                      <field name="TEXT">poi_reset</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="variables_set" id=".N={h_*G;2IV5qj^Ork8">
+                      <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                      <value name="VALUE">
+                        <block type="math_number" id="bEUE9`zFynuW3H(tFptg">
+                          <field name="NUM">0</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="setObjTransform" id="4rvJMz`!n7V@A8I$DEN9">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="true" useworldspace="false"></mutation>
+                          <field name="MODE">position</field>
+                          <field name="OFFSET">FALSE</field>
+                          <value name="TARGETOBJ">
+                            <shadow type="objectList" id="JH4}oa@r72_~]}=crCHb">
+                              <field name="FIELDNAME">PhysCamera002</field>
+                            </shadow>
+                          </value>
+                          <value name="USE_VECTOR">
+                            <block type="getObjTransform" id="SD.3Jh-SdZx*MLnAdg_J">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+                              <field name="MODE">position</field>
+                              <field name="COORD">xyz</field>
+                              <value name="TARGETOBJ">
+                                <shadow type="objectList" id="_9K:iaQN)zVR6*YEANyR">
+                                  <field name="FIELDNAME">center.camera.pos</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="setObjTransform" id="`Hv}b[s1YA,N~6Rwx^Yw">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="true" useworldspace="false"></mutation>
+                              <field name="MODE">position</field>
+                              <field name="OFFSET">FALSE</field>
+                              <value name="TARGETOBJ">
+                                <shadow type="objectList" id="L1|^;$y0ZWQ;BUBo9gjs">
+                                  <field name="FIELDNAME">PhysCamera002.Target</field>
+                                </shadow>
+                              </value>
+                              <value name="USE_VECTOR">
+                                <block type="getObjTransform" id="UGvtTJoa4nisOF}xf6wG">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+                                  <field name="MODE">position</field>
+                                  <field name="COORD">xyz</field>
+                                  <value name="TARGETOBJ">
+                                    <shadow type="objectList" id="TivDT?,}MA/Gha_yO=Rb">
+                                      <field name="FIELDNAME">center</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="setActiveCamera" id="I^W4$^PmzyK|2$_,7ntK">
+                                  <value name="CAMERA">
+                                    <shadow type="objectList" id="RR?4yh6WZN.+{`Rc%?6i">
+                                      <field name="FIELDNAME">PhysCamera001</field>
+                                    </shadow>
+                                  </value>
+                                  <next>
+                                    <block type="enableRendering" id="A#IKvpRlJ-4Fl^Jte{Oz">
+                                      <next>
+                                        <block type="setAnimationFrame" id="i9gSYL{$a$/]p0~Xrr[[">
+                                          <value name="VALUE">
+                                            <shadow type="animationList">
+                                              <field name="FIELDNAME">&lt;none&gt;</field>
+                                            </shadow>
+                                            <block type="getAnimations" id="Ji9^Jt7M3IKHJ1YUX@3Y">
+                                              <value name="OBJECTINPUT">
+                                                <block type="groupList" id="[-vfFQ7:pS{+g32^Bk/w">
+                                                  <field name="FIELDNAME">all</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <value name="FROM">
+                                            <shadow type="math_number" id="Mb`|4q{RY9;N6LYaehA{">
+                                              <field name="NUM">1</field>
+                                            </shadow>
+                                          </value>
+                                          <next>
+                                            <block type="setMaterialValue" id="#WxfK+g-|u6`SmIRRJta">
+                                              <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+                                              <field name="MAT_VAL_NAME">set1_Transparency</field>
+                                              <value name="MATERIAL">
+                                                <shadow type="materialList" id="`afjII6)??LkggFhO!El">
+                                                  <field name="FIELDNAME">set1</field>
+                                                </shadow>
+                                              </value>
+                                              <value name="VALUE">
+                                                <shadow type="math_number" id="+4z|7OZ_}=3SX=QjMhS1">
+                                                  <field name="NUM">0</field>
+                                                </shadow>
+                                              </value>
+                                              <next>
+                                                <block type="setMaterialValue" id="VJ73]Zz?}^fGWr`kbcyZ">
+                                                  <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+                                                  <field name="MAT_VAL_NAME">set2_Transparency</field>
+                                                  <value name="MATERIAL">
+                                                    <shadow type="materialList" id="DuXv`/8]4IpgH[{-Sd::">
+                                                      <field name="FIELDNAME">set2</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <value name="VALUE">
+                                                    <shadow type="math_number" id="|{1sZei{8k}{{6vtJKfY">
+                                                      <field name="NUM">0</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <next>
+                                                    <block type="setMaterialValue" id=";[T:qWNgCKf2l@*j89XB">
+                                                      <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+                                                      <field name="MAT_VAL_NAME">set3_Transparency</field>
+                                                      <value name="MATERIAL">
+                                                        <shadow type="materialList" id="NSEAUjq4=Lx|zx`*BL01">
+                                                          <field name="FIELDNAME">set3</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <value name="VALUE">
+                                                        <shadow type="math_number" id="u%aM}:v2=8+`cAvG1^?]">
+                                                          <field name="NUM">0</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <next>
+                                                        <block type="setMaterialValue" id="K8#!b7@Hs;cVKK.xf;jT">
+                                                          <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+                                                          <field name="MAT_VAL_NAME">set4_Transparency</field>
+                                                          <value name="MATERIAL">
+                                                            <shadow type="materialList" id="BUv]0($n_#^+3hu=X%zR">
+                                                              <field name="FIELDNAME">set4</field>
+                                                            </shadow>
+                                                          </value>
+                                                          <value name="VALUE">
+                                                            <shadow type="math_number" id="|T`amubkDU]wd_Gt:WG]">
+                                                              <field name="NUM">0</field>
+                                                            </shadow>
+                                                          </value>
+                                                          <next>
+                                                            <block type="setMaterialValue" id="2KCePOTR5Oy=Q8^W=Nqa">
+                                                              <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+                                                              <field name="MAT_VAL_NAME">set5_Transparency</field>
+                                                              <value name="MATERIAL">
+                                                                <shadow type="materialList" id="HAPOeHU3.:Lk-LXNZHXw">
+                                                                  <field name="FIELDNAME">set5</field>
+                                                                </shadow>
+                                                              </value>
+                                                              <value name="VALUE">
+                                                                <shadow type="math_number" id=";JA[Bj,(jEg?B,8tx]|n">
+                                                                  <field name="NUM">0</field>
+                                                                </shadow>
+                                                              </value>
+                                                              <next>
+                                                                <block type="disableRendering" id="InFi8BqV(AUx}zPSMxl`">
+                                                                  <field name="AA">TRUE</field>
+                                                                </block>
+                                                              </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="eventHTMLElem" id="Fz47mT*|.hCz3=jo_B;H">
+                      <field name="EVENT">click</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="ID">
+                        <shadow type="text" id="Q#CEWefX027r%YQsD!an">
+                          <field name="TEXT">poi1</field>
+                        </shadow>
+                      </value>
+                      <statement name="DO">
+                        <block type="variables_set" id="P18@ydJ[fe,l{Q(s+Ohh">
+                          <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                          <value name="VALUE">
+                            <block type="math_number" id="El6e/U!$:SDNXOdHD0yj">
+                              <field name="NUM">1</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="procedures_callnoreturn" id="lOBia@~R:vqE9i/hrNIp">
+                              <mutation name="ani_start"/>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="eventHTMLElem" id="K2fxPjT`~f;z7iu}i)r#">
+                          <field name="EVENT">click</field>
+                          <field name="PARENT">FALSE</field>
+                          <value name="ID">
+                            <shadow type="text" id="p0ecVg^tuPM9Mmfh@y2V">
+                              <field name="TEXT">poi2</field>
+                            </shadow>
+                          </value>
+                          <statement name="DO">
+                            <block type="variables_set" id="k1|RatrN5TW8v:3pI^Ua">
+                              <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                              <value name="VALUE">
+                                <block type="math_number" id="SrK=.6CLBGzL)tRHa3st">
+                                  <field name="NUM">2</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="procedures_callnoreturn" id="MwJS$?X3DdQ0X].#|KD:">
+                                  <mutation name="ani_start"/>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="eventHTMLElem" id="1EjC?[I6+OsJ-L|mfs9~">
+                              <field name="EVENT">click</field>
+                              <field name="PARENT">FALSE</field>
+                              <value name="ID">
+                                <shadow type="text" id="e_){rs-RQZ6)k^Q*^rjC">
+                                  <field name="TEXT">poi3</field>
+                                </shadow>
+                              </value>
+                              <statement name="DO">
+                                <block type="variables_set" id="(UOiOz!youK[PHM44B7o">
+                                  <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                  <value name="VALUE">
+                                    <block type="math_number" id="VqNNi^h^s$EI1=OYo-1I">
+                                      <field name="NUM">3</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="procedures_callnoreturn" id="Z:9yR_z@0a(.^X5*L+,H">
+                                      <mutation name="ani_start"/>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="eventHTMLElem" id="(tG}#IZzqOW/Lo:/*]2Q">
+                                  <field name="EVENT">click</field>
+                                  <field name="PARENT">FALSE</field>
+                                  <value name="ID">
+                                    <shadow type="text" id="/:Nb$,V5u=cWl1}u?3tv">
+                                      <field name="TEXT">poi4</field>
+                                    </shadow>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="variables_set" id="Mr7B}`9UcGB+2uLPv?|*">
+                                      <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                      <value name="VALUE">
+                                        <block type="math_number" id="rpf%h1`h~!v(+=mST06L">
+                                          <field name="NUM">4</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="procedures_callnoreturn" id="--%+,KZOOi`MIb]W)}aY">
+                                          <mutation name="ani_start"/>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="eventHTMLElem" id="hD[4DHcARhd_Jl:,/D!|">
+                                      <field name="EVENT">click</field>
+                                      <field name="PARENT">FALSE</field>
+                                      <value name="ID">
+                                        <shadow type="text" id="LPm)$dEesJ}]xC]I/n+j">
+                                          <field name="TEXT">poi5</field>
+                                        </shadow>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="variables_set" id="ESXE6/|cg*ydiC#UE7+i">
+                                          <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                          <value name="VALUE">
+                                            <block type="math_number" id="p]aQRq(AsvA6u|($jxZ?">
+                                              <field name="NUM">5</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="procedures_callnoreturn" id="L{!w*j4t})z2J%kCf:-/">
+                                              <mutation name="ani_start"/>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="eventHTMLElem" id="W.ZCT9%%1*51,^hvXQdz">
+                                          <field name="EVENT">click</field>
+                                          <field name="PARENT">FALSE</field>
+                                          <value name="ID">
+                                            <shadow type="text" id="}alCsRl.)f6ywuU%H[C2">
+                                              <field name="TEXT">poi6</field>
+                                            </shadow>
+                                          </value>
+                                          <statement name="DO">
+                                            <block type="variables_set" id="rY7TeSXHdD2gsXlqf{{Q">
+                                              <field name="VAR" id=".c}Vltc}R[d?}aJ-E#/P">step</field>
+                                              <value name="VALUE">
+                                                <block type="math_number" id="e{tGj+S7zI7{c7?)XJn/">
+                                                  <field name="NUM">6</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="procedures_callnoreturn" id="}b6Fo_D.-V`[t+mHyjd0">
+                                                  <mutation name="ani_start"/>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="28" viewport-w="768" viewport-h="468.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

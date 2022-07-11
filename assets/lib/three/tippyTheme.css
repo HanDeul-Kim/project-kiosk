@@ -1,0 +1,11 @@
+.tippy-box[data-animation='animate01'][data-state='hidden'] {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  
+  .tippy-box[data-animation='animate02'][data-state='hidden'] {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  
+  

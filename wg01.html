@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dinosaur01</title>
+    <link rel="stylesheet" href="./assets/lib/three/backdrop.css">
+    <link rel="stylesheet" href="./assets/lib/three/svg-arrow.css">
+    <link rel="stylesheet" href="./assets/lib/three/light.css">
+    <link rel="stylesheet" href="./assets/css/wg.css" />
+    <link rel="stylesheet" href="./assets/lib/three/spinkit.min.css">
+    <style>
+        :root {
+            --sk-size: 80px;
+            --sk-color: rgba(255, 255, 255, 0.7);
+        }
+        .tippy-box {
+            background: #5f6449;
+            display: none;
+        }
+        .tippy-arrow {
+            color: #5f6449;
+            display: none;
+        }
+        .dino_img img{
+            animation:click 1.5s linear infinite;
+        }
+        .click_me.active {
+            display: none;
+        }
+        .click_me {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @keyframes click {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="modal-inner">
+        <img src="./assets/img/clickme.png" alt="click_me.png" class="click_me">
+        <div class="top_con">
+            <div class="head">
+                <div>티라노사우루스</div>
+            </div>
+            <div class="dino_img">
+                <img src="./assets/img/info.png" alt="info.png">
+            </div>
+        </div>
+        <div class="bottom_con">
+            <div class="info-wrap">
+                <div class="row">
+                    <span>이름의 뜻</span>
+                    <span>키</span>
+                    <span>몸 길이</span>
+                    <span>무게</span>
+                    <span>먹이</span>
+                    <span>시대</span>
+                </div>
+                <div class="row">
+                    <span>폭군 도마뱀</span>
+                    <span>4~6미터</span>
+                    <span>12~13미터</span>
+                    <span>5~7톤</span>
+                    <span>다른 공룡들</span>
+                    <span>백악기</span>
+                </div>
+            </div>
+            <a href="./index.html" class="next_level">Next level</a>
+        </div>
+    </div>
+    <div class="canvasWrap">
+        <div class="spinner">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+        </div>
+        <div id="canvas">
+            <span class="click_text">공룡을 움직여 보세요!</span>
+            <img src="./assets/img/touch.gif" alt="touch" class="touch">
+        </div>
+    </div>
+    <!-- script -->
+    <script src="./assets/lib/three/three.js"></script>
+    <script src="./assets/lib/three/OrbitControls.js"></script>
+    <script src="./assets/lib/three/GLTFLoader.js"></script>
+    <script src="./assets/lib/three/RGBELoader.js"></script>
+    <script src="./assets/lib/three/CSS2DRenderer.js"></script>
+    <script src="./assets/lib/three/Projector.js"></script>
+    <script src="./assets/lib/three/domevents.js"></script>
+    <script src="./assets/lib/gsap/gsap.min.js"></script>
+    <script src="./assets/lib/three/core@2.js"></script>
+    <script src="./assets/lib/three/js@6.js"></script>
+    <script src="./assets/lib/jquery/jquery.js"></script>
+    <script src="./assets/js/module/touchEvent.js"></script>
+    <script src="./assets/lib/howler/howler.min.js"></script>
+    <script src="./assets/js/lang.js" type="module"></script>
+    <!-- main -->
+    <script src="./assets/js/wg01.js" type="module"></script>
+    <script>
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+        window.addEventListener("resize", () => {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty("--vh", `${vh}px`);
+        });
+        // 로컬스토리지
+        document.querySelector('.next_level').addEventListener("click", function () {
+            if (Number(localStorage.getItem('step_ko')) == 0) {
+                localStorage.setItem("step_ko", Number(localStorage.getItem("step_ko")) + 1)
+            }
+        })
+        setTimeout(function () {
+            document.querySelector('.click_text').classList.add('active');
+        }, 2500)
+    </script>
+</body>
+
+</html>
